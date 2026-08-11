@@ -1,0 +1,16 @@
+{
+  "name": "it-asset-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IT Asset Management System - Full Stack Application",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
