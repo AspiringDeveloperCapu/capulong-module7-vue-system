@@ -1,121 +1,149 @@
-# IT Asset Management System - Prototype Implementation
+# IT Asset Management System
+### Software Engineering 1 — Module 7: Design and Implementation
 
-## Student Information
-
-* **Name:** Aaron Jacob B. Capulong
-* **Course & Section:** BSCS 3A
-* **Subject:** Software Engineering 1
-* **Module:** Module 7 - Design and Implementation
-* **Instructor:** Patrick Jason L. Torres
+**Student:** Capulong  
+**Section:** *(your section here)*  
+**Repository:** [capulong-module7-vue-system](https://github.com/AspiringDeveloperCapu/capulong-module7-vue-system)
 
 ---
 
-## 1. Project Overview & Selected Entity
+## 📋 System Description
 
-This repository contains the prototype implementation of the **IT Asset Management System** designed in Module 6. For Module 7, the core **IT Asset / Equipment** entity was selected for full CRUD implementation and interactive prototype interface.
+The **IT Asset Management System** is a frontend prototype built as part of Module 7. It implements the **Equipment** entity selected from the Module 6 architectural design — an IT Asset Management System that tracks hardware and software assets across an organization.
 
-The system empowers IT Administrators to track hardware assets (Laptops, Desktops, Monitors, Printers, Servers), manage equipment status (Available, Assigned, Under Maintenance, Retired), assign devices to employees, and monitor total inventory valuation.
-
----
-
-## 2. Technologies Used
-
-* **Frontend Framework:** Vue 3 (Composition API `<script setup>`) + Vite
-* **Styling:** Tailwind CSS (v4) + Custom Glassmorphic Dark Design System
-* **Icons:** Lucide Icons (`lucide-vue-next`)
-* **State & Persistence:** Browser `localStorage` (Offline Prototype Mode) + Express REST API (Full-Stack Mode)
-* **Backend API:** Node.js + Express.js
-* **Continuous Integration:** GitHub Actions (`.github/workflows/build.yml`)
-* **Version Control:** Git & GitHub
+This prototype allows users to add, view, edit, delete, and search IT asset records directly in the browser using `localStorage` for data persistence — no backend or database required.
 
 ---
 
-## 3. Implemented Features
+## ✅ Implemented Features
 
-1. **Reusable Component Architecture**:
-   - `AppHeader.vue`: Branding header, student info, storage status badge, and sample data reset button.
-   - `RecordForm.vue`: Modal form for adding and updating asset records with validation.
-   - `RecordList.vue`: Interactive table list displaying assets, status badges, values, and action buttons.
-   - `AppFooter.vue`: Footer section displaying student metadata and course details.
-
-2. **Full CRUD Operations**:
-   - **Create**: Add new assets with auto-generated serial numbers, categories, cost, and purchase dates.
-   - **Read**: View equipment list and real-time dashboard metrics (Total Assets, Available, Assigned, Maintenance, Valuation).
-   - **Update**: Edit existing asset attributes or quick-assign assets to employees.
-   - **Delete**: Remove asset records with confirmation popups.
-
-3. **Search & Filter**:
-   - Real-time search across asset names, serial numbers, and assignee names.
-   - Filter by asset category (Laptop, Monitor, Printer, Server, etc.) and operational status.
-
-4. **Form Validation & User Feedback**:
-   - Required field checks to prevent empty submissions.
-   - Animated toast notifications for success/error alerts.
+- **Add Asset** — Create a new asset record using a validated form
+- **View Assets** — Display all records in a responsive table/card layout
+- **Edit Asset** — Load an existing record into the form, update, and save
+- **Delete Asset** — Remove a record after confirmation prompt
+- **Search/Filter** — Filter records by asset name or code in real time
+- **Validation** — Prevents form submission when required fields are empty
+- **Persistence** — Records are saved to `localStorage` and survive page refresh
+- **Stats Dashboard** — Summary cards showing Total, Available, Assigned, and Maintenance counts
+- **Responsive Design** — Works on desktop and smaller screen widths
 
 ---
 
-## 4. Relationship Between Module 6 and Module 7
+## 🛠 Technologies Used
 
-| Module 6 (Architecture) | Module 7 (Implementation) |
+| Technology | Purpose |
 |---|---|
-| Proposed Three-Tier Architecture | Vue 3 Presentation Layer + Express Application Layer |
-| `assets` Primary Database Collection | `IT Asset / Equipment` Functional Entity |
-| System Requirements & Data Flow | Interactive CRUD Forms, Search, and Status Tracking |
-| Data Layer Specification | Browser `localStorage` (`module7-records`) + Offline Fallback Engine |
+| Vue.js 3 + Vite | Frontend framework and build tooling |
+| Tailwind CSS v4 | Utility-first responsive styling |
+| JavaScript (ES6+) | Application and CRUD logic |
+| localStorage | Browser-based data persistence |
+| Git + GitHub | Version control and repository submission |
+| GitHub Actions | Continuous integration build check |
 
 ---
 
-## 5. Explanation of `localStorage` Data Persistence
+## 📁 Project Structure
 
-The application uses browser `localStorage` under the key `module7-records` to ensure data persists even when the browser is refreshed or reopened. 
-- **On Startup**: The app checks if `module7-records` exists in `localStorage`. If found, it populates the state immediately; if empty, it initializes default sample hardware assets.
-- **On Create / Update / Delete**: Any modification immediately updates the reactive state and stringifies the updated array into `localStorage`.
-- **Hybrid Support**: If the Node/Express backend is running on `http://localhost:5000`, the app automatically syncs changes to the API while keeping `localStorage` updated as a backup.
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── AppHeader.vue      # Navigation bar and system title
+│   │   ├── RecordForm.vue     # Asset entry and edit form
+│   │   ├── RecordList.vue     # Asset table with search and actions
+│   │   └── AppFooter.vue      # Footer with student name and section
+│   ├── App.vue                # Root component and state management
+│   ├── main.js                # Application entry point
+│   └── style.css              # Global styles with Tailwind import
+├── index.html
+├── vite.config.js
+└── package.json
+.github/
+└── workflows/
+    └── build.yml              # GitHub Actions CI workflow
+```
 
 ---
 
-## 6. Installation & Local Run Instructions
+## 🚀 Installation and Run Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- Git
+- npm
 
-### Quick Start (Full Stack)
+### Steps
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/AspiringDeveloperCapu/capulong-module6-architecture.git
-   cd capulong-module6-architecture
-   ```
+```bash
+# 1. Clone the repository
+git clone https://github.com/AspiringDeveloperCapu/capulong-module7-vue-system.git
+cd capulong-module7-vue-system
 
-2. **Install Dependencies**:
-   ```bash
-   # Install root, backend, and frontend dependencies
-   npm run install:all
-   ```
+# 2. Install frontend dependencies
+cd frontend
+npm install
 
-3. **Start the Application**:
-   ```bash
-   # Starts both backend (port 5000) and Vue frontend (port 3000)
-   npm run dev
-   ```
+# 3. Start the development server
+npm run dev
+```
 
-4. **Open in Browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+Open your browser and go to: **http://localhost:3000**
 
 ---
 
-## 7. Continuous Integration (CI)
+## 💾 localStorage Explanation
 
-A GitHub Actions workflow is configured in `.github/workflows/build.yml`. On every push or pull request to `main`, GitHub Actions automatically:
-1. Checks out the repository.
-2. Installs Node.js v22 and project dependencies via `npm install`.
-3. Runs `npm run build` inside `frontend/` to verify clean compilation.
+This prototype uses the browser's built-in `localStorage` API to persist data without a backend server. When a record is added, edited, or deleted, the updated list is serialized as JSON and saved under the key `module7-records`. When the page loads, `onMounted()` reads from `localStorage` and restores all previously saved records automatically.
+
+```js
+// Save records
+localStorage.setItem('module7-records', JSON.stringify(records.value))
+
+// Load records on mount
+onMounted(() => {
+  const saved = localStorage.getItem('module7-records')
+  records.value = saved ? JSON.parse(saved) : []
+})
+```
 
 ---
 
-## 8. Known Limitations & Future Improvements
+## 🔗 Connection Between Module 6 and Module 7
 
-- **Authentication**: User role-based authentication (Admin vs Employee) is planned for future modules.
-- **Exporting**: PDF/CSV export for inventory audit reports.
-- **Barcodes**: QR code / Barcode scanner integration for physical asset tags.
+| Module 6 Element | Module 7 Implementation |
+|---|---|
+| Proposed complete system | Basis and long-term blueprint |
+| Presentation layer | Vue components and Tailwind CSS interface |
+| Equipment entity (Asset System) | Selected functional prototype |
+| User interactions | Forms, buttons, record list, and search |
+| Application logic | JavaScript CRUD and validation functions |
+| Data layer | Simulated using browser localStorage |
+| Backend / API / Database | Future implementation — not required for Module 7 |
+
+---
+
+## ⚠️ Known Limitations
+
+- Data is stored only in the browser — clearing browser data will erase all records
+- No authentication or user role management
+- No backend API integration (planned for future modules)
+- Search is limited to asset name field only
+
+## 🔮 Proposed Future Improvements
+
+- Connect to the Express REST API backend (already designed in Module 6)
+- Add MongoDB Atlas database integration for persistent cloud storage
+- Implement user authentication and role-based access control
+- Add data export to CSV/PDF
+- Deploy to a cloud hosting platform (e.g., Vercel, Render)
+
+---
+
+## 📸 Screenshots
+
+*(Screenshots will be added after running the application)*
+
+---
+
+## 📄 License
+
+This project is created for academic purposes — Software Engineering 1, Module 7.
