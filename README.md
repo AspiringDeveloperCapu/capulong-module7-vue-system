@@ -141,37 +141,37 @@ onMounted(() => {
 ## 📸 Screenshots
 
 ### IT Asset Management Dashboard
-![IT Asset Management Dashboard](docs/screenshots/asset-dashboard.png)
+![IT Asset Management Dashboard](docs/screenshots/01-running-application.png)
 
 ### Register New Asset
-![Register New Asset](docs/screenshots/register-new-asset.png)
+![Register New Asset](docs/screenshots/02-add-record.png)
+
+### Record List
+![Record List](docs/screenshots/03-record-list.png)
 
 ### Edit Asset Record
-![Edit Asset Record](docs/screenshots/edit-asset-record.png)
-
-### Asset Update Confirmation
-![Asset Update Confirmation](docs/screenshots/asset-update-confirmation.png)
+![Edit Asset Records](docs/screenshots/04-edit-record.png)
 
 ### Delete Asset Confirmation
-![Delete Asset Confirmation](docs/screenshots/delete-asset-confirmation.png)
+![Delete Asset Confirmation](docs/screenshots/05-delete-confirmation.png)
 
 ### Search Asset Records
-![Search Asset Records](docs/screenshots/search-asset-records.png)
-
-### Responsive Mobile Asset View
-![Responsive Mobile Asset View](docs/screenshots/responsive-mobile-view.png)
+![Search Asset Records](docs/screenshots/06-search-function.png.png)
 
 ### localStorage Data Persistence
-![localStorage Data Persistence](docs/screenshots/localstorage-persistence.png)
+![localStorage Data Persistence](docs/screenshots/07-localstorage.png)
+
+### Responsive Mobile Asset View
+![Responsive Mobile Asset View](docs/screenshots/08-responsive-view.png)
 
 ### GitHub Repository
-![GitHub Repository](docs/screenshots/github-repository.png)
+![GitHub Repository](docs/screenshots/09-github-repository.png)
 
 ### Git Commit History
-![Git Commit History](docs/screenshots/git-commit-history.png)
+![Git Commit History](docs/screenshots/10-commit-history.png)
 
 ### GitHub Actions Build Check
-![GitHub Actions Build Check](docs/screenshots/github-actions-build.png)
+![GitHub Actions Build Check](docs/screenshots/11-ci-success.png)
 
 
 ---
