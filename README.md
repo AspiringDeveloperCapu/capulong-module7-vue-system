@@ -1,8 +1,8 @@
 # IT Asset Management System
 ### Software Engineering 1 — Module 7: Design and Implementation
 
-**Student:** Capulong  
-**Section:** *(your section here)*  
+**Student:** Aaron Jacob Capulong  
+**Section:** BSCS - 3A  
 **Repository:** [capulong-module7-vue-system](https://github.com/AspiringDeveloperCapu/capulong-module7-vue-system)
 
 ---
@@ -140,7 +140,39 @@ onMounted(() => {
 
 ## 📸 Screenshots
 
-*(Screenshots will be added after running the application)*
+### IT Asset Management Dashboard
+![IT Asset Management Dashboard](docs/screenshots/asset-dashboard.png)
+
+### Register New Asset
+![Register New Asset](docs/screenshots/register-new-asset.png)
+
+### Edit Asset Record
+![Edit Asset Record](docs/screenshots/edit-asset-record.png)
+
+### Asset Update Confirmation
+![Asset Update Confirmation](docs/screenshots/asset-update-confirmation.png)
+
+### Delete Asset Confirmation
+![Delete Asset Confirmation](docs/screenshots/delete-asset-confirmation.png)
+
+### Search Asset Records
+![Search Asset Records](docs/screenshots/search-asset-records.png)
+
+### Responsive Mobile Asset View
+![Responsive Mobile Asset View](docs/screenshots/responsive-mobile-view.png)
+
+### localStorage Data Persistence
+![localStorage Data Persistence](docs/screenshots/localstorage-persistence.png)
+
+### GitHub Repository
+![GitHub Repository](docs/screenshots/github-repository.png)
+
+### Git Commit History
+![Git Commit History](docs/screenshots/git-commit-history.png)
+
+### GitHub Actions Build Check
+![GitHub Actions Build Check](docs/screenshots/github-actions-build.png)
+
 
 ---
 
